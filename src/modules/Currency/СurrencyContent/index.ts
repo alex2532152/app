@@ -1,0 +1,1 @@
+export { CurrencyContent } from './CurrencyContent';

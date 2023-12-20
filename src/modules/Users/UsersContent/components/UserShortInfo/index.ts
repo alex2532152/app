@@ -1,0 +1,1 @@
+export { UserShortInfo } from './UserShortInfo';

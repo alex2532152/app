@@ -1,0 +1,1 @@
+export { UsersShortInfoSkeleton } from './UsersShortInfoSkeleton';

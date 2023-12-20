@@ -1,0 +1,8 @@
+{
+    "title": "Users",
+    "searchPlaceholder": "Input search name",
+    "emptyResult": {
+        "title": "Nothing found",
+        "description":"No results were found for your request =("
+    }
+}
