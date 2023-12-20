@@ -1,26 +1,9 @@
-import { Suspense, useEffect, useState } from "react"
-import { UsersStore } from "./stores/UsersStore"
-import { observer } from "mobx-react-lite"
-import { autorun } from "mobx"
-import { UsersContent } from "./UsersContent"
+import { Route, Routes } from "react-router-dom"
+import { UserList } from "./UserList"
+import { User } from "./User"
 
-export const Users = observer(() => {
-    const [store] = useState(() => new UsersStore())
-    const {getUserData, setUsersState, newUsersState} = store
-
-    useEffect(() => {
-        getUserData()}
-    , [getUserData, store.pagination.dto])
-
-    useEffect (() => 
-         autorun(() => {
-            if(newUsersState?.pending === false){
-                setUsersState(newUsersState)
-            }
-        }),
-        [newUsersState, setUsersState])
-
-    return <Suspense>
-        <UsersContent store={store}/>
-    </Suspense>
-})
+export const Users = () =>
+    <Routes>
+        <Route path="*" element={<UserList/>}/>
+        <Route path="user/:id" element={<User/>}/>
+    </Routes>

@@ -1,1 +1,1 @@
-export const DEFAULT_KEY = 'user';
+export const DEFAULT_KEY = '/';

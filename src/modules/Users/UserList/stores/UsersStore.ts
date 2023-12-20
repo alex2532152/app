@@ -1,8 +1,8 @@
 import { action, makeAutoObservable, reaction } from "mobx";
-import { PromiseObserver, fromPromise } from "../../../common/utils/fromPromise";
+import { PromiseObserver, fromPromise } from "../../../../common/utils/fromPromise";
 import axios, { AxiosResponse, AxiosError } from "axios";
-import { PaginationStore } from "../../../common/store/PaginationStore";
-import { UsersData } from "../models/UsersData";
+import { PaginationStore } from "../../../../common/store/PaginationStore";
+import { UsersData } from "../../models/UsersData";
 
 export class UsersStore {
 

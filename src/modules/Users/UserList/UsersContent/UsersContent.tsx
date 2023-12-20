@@ -1,12 +1,12 @@
 import { observer } from "mobx-react-lite";
-import { StorePagination } from "../../../common/components/StorePagination"
-import { Title } from "../../../common/components/Title/Title"
-import { UsersStore } from "../stores/UsersStore"
 import { UserShortInfo } from "./components/UserShortInfo";
 import { useTranslation } from "react-i18next";
 import { UsersShortInfoSkeleton } from "./components/UsersShortInfoSkeleton";
 import { SearchUser } from "./SearchUser";
-import { EmptyResult } from "../../../common/components/EmptyResult";
+import { UsersStore } from "../stores/UsersStore";
+import { EmptyResult } from "../../../../common/components/EmptyResult";
+import { StorePagination } from "../../../../common/components/StorePagination";
+import { Title } from "../../../../common/components/Title/Title";
 
 type UsersContentProps = {
     store: UsersStore;
@@ -30,6 +30,7 @@ export const UsersContent = observer(({ store }: UsersContentProps) => {
                 usersData.map(({id, firstName, lastName, image, address}) => 
                     <UserShortInfo 
                         key={id}
+                        id={id}
                         fullname={`${firstName} ${lastName}`}
                         avatarUrl={image}
                         address={address.address}

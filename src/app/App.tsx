@@ -29,6 +29,8 @@ export const App = () => {
     navigate(path)
   }
 
+  const keyLocation = location.pathname.includes('user') ? DEFAULT_KEY : location.pathname; 
+
   return (
     <Layout style={{height:"100vh"}}>
       <Sider trigger={null} collapsible breakpoint="sm"
@@ -40,7 +42,7 @@ export const App = () => {
         <Menu
           theme="dark"
           mode="inline"
-          defaultSelectedKeys={[location.pathname || DEFAULT_KEY]}
+          defaultSelectedKeys={[keyLocation]}
           items={[
             {
               key: '/',
