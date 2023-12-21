@@ -1,0 +1,32 @@
+{
+    "title": "User - {{user}}",
+    "imagePreview": "Preview",
+    "personalTitle": "Personal data",
+    "firstName": "FirstName:",
+    "lastName": "LastName:",
+    "age": "Age:",
+    "birthDate": "Birth date:",
+    "bloodGroup": "Blood group:",
+    "email": "email:",
+    "gender": "gender:",
+    "eyeColor": "eyeColor:",
+    "phone": "phone:",
+    "address": {
+        "addressInfo": "Address:",
+        "postalCode": "PostalCode:",
+        "state": "State:"
+    },
+    "bank": {
+        "bankInfo": "Bank Info",
+        "cardExpire": "Card expire:",
+        "cardNumber": "Card number:",
+        "cardType": "Card type:",
+        "currency": "Currency:",
+        "iban": "IBAN:"
+    }, 
+    "company": {
+        "bankCompany": "Bank company info",
+        "department": "department:",
+        "name": "name:"
+    }
+}

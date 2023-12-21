@@ -1,0 +1,31 @@
+{
+    "title": "Пользователь - {{user}}",
+    "imagePreview": "Просмотр",
+    "personalTitle": "Личные данные",
+    "firstName": "Имя:",
+    "lastName": "Фамилия:",
+    "age": "Возраст:",
+    "birthDate": "Дата рождения:",
+    "bloodGroup": "Группа крови:",
+    "email": "Электронная почта:",
+    "gender": "Пол:",
+    "phone": "Номер телефона:",
+    "address": {
+        "addressInfo": "Aдрес",
+        "postalCode": "Почтовый индекс:",
+        "state": "штат"
+    },
+    "bank": {
+        "bankInfo": "Банковские данные",
+        "cardExpire": "Срок действия карты:",
+        "cardNumber": "Номер карты:",
+        "cardType": "Тип карты:",
+        "currency": "Валюта:",
+        "iban": "IBAN:"
+    }, 
+    "company": {
+        "bankCompany": "Информация о месте работы",
+        "department": "Отдел:",
+        "name": "Наименование:"
+    }
+}

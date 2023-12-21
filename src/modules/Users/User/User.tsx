@@ -1,13 +1,23 @@
-import { useNavigate } from "react-router-dom";
-import { Title } from "../../../common/components/Title/Title";
+import { Suspense, useEffect, useState } from "react";
+import { UserContent } from "./UserContent";
+import { UserStore } from "./stores/UserStore";
+import { useParams } from "react-router-dom";
 
 
 export const User = () => {
-    const navigate = useNavigate();
-    const handleGoBack = () => {
-        navigate('../')
-    }
+    const [store] = useState(() => new UserStore);
+    const { id } = useParams<{id: string}>();
+    const { getUserData } = store;
+
+    useEffect(() => {
+        if(id) {
+          getUserData(id);
+        }
+    }, [id, getUserData])
+
     return (
-        <Title value="User" goBack={handleGoBack}/>
+        <Suspense>
+            <UserContent store={store}/>
+        </Suspense>
     )
 }

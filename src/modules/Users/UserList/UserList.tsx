@@ -20,7 +20,9 @@ export const UserList = observer(() => {
         }),
         [newUsersState, setUsersState])
 
-    return <Suspense>
-        <UsersContent store={store}/>
-    </Suspense>
+    return (
+        <Suspense>
+            <UsersContent store={store}/>
+        </Suspense>
+    )
 })

@@ -47,7 +47,7 @@ export class UsersStore {
         )
     }
 
-    getUserData  = async () =>{
+    getUserData  = async () => {
         const promise = axios.get(`https://dummyjson.com/users${this.searchTream  ? '/search': ''}`,{
             params: {
                 skip: this.pagination.dto.page * this.pagination.dto.size,

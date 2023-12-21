@@ -7,6 +7,7 @@ import { UsersStore } from "../stores/UsersStore";
 import { EmptyResult } from "../../../../common/components/EmptyResult";
 import { StorePagination } from "../../../../common/components/StorePagination";
 import { Title } from "../../../../common/components/Title/Title";
+import { getFullName } from "../../../../common/utils/getFullName";
 
 type UsersContentProps = {
     store: UsersStore;
@@ -31,7 +32,7 @@ export const UsersContent = observer(({ store }: UsersContentProps) => {
                     <UserShortInfo 
                         key={id}
                         id={id}
-                        fullname={`${firstName} ${lastName}`}
+                        fullname={getFullName(firstName, lastName)}
                         avatarUrl={image}
                         address={address.address}
                     />)}
