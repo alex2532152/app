@@ -1,1 +1,1 @@
-export { UsersContent } from "./UsersContent"
+export { UsersContent } from './UsersContent';

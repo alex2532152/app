@@ -1,8 +1,9 @@
-import './UserInfoTitle.less'
+import './UserInfoTitle.less';
 
 type UserInfoTitleProps = {
-    title: string;
-}
+  title: string;
+};
 
-export const UserInfoTitle = ({ title }: UserInfoTitleProps) =>
-    <div className='user-info-title'>{title}</div>
+export const UserInfoTitle = ({ title }: UserInfoTitleProps) => (
+  <div className="user-info-title">{title}</div>
+);

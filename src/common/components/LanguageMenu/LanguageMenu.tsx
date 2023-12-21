@@ -1,6 +1,6 @@
 import { useCallback, useMemo, useState } from 'react';
 import i18next from 'i18next';
-import { DownOutlined } from '@ant-design/icons'
+import { DownOutlined } from '@ant-design/icons';
 import { Button, Dropdown, MenuProps } from 'antd';
 import classNames from 'classnames';
 import { LANGUAGE_LIST } from './constants/languages';
@@ -29,17 +29,21 @@ export const LanguageMenu = () => {
     [handleChangeLanguage],
   );
 
-  const items: MenuProps['items'] = Object.entries(LANGUAGE_LIST).map(([key, value]) => ({
-    key,
-    label: <div
-                onClick={languageClickHandlers[key]}
-                className={classNames('language-dropdown-option', {
-                'language-dropdown-option-selected': i18next.language === key,
-                })}
-            >
-                {value}
+  const items: MenuProps['items'] = Object.entries(LANGUAGE_LIST).map(
+    ([key, value]) => ({
+      key,
+      label: (
+        <div
+          onClick={languageClickHandlers[key]}
+          className={classNames('language-dropdown-option', {
+            'language-dropdown-option-selected': i18next.language === key,
+          })}
+        >
+          {value}
         </div>
-  }))
+      ),
+    }),
+  );
 
   return (
     <Dropdown
@@ -52,12 +56,12 @@ export const LanguageMenu = () => {
       placement="bottomRight"
       trigger={['click']}
     >
-      <Button type='text' className="ant-dropdown-link">
+      <Button type="text" className="ant-dropdown-link">
         <span className="language-menu-current">
           {LANGUAGE_LIST[i18next.language]}
         </span>
         <DownOutlined />
-      </Button >
+      </Button>
     </Dropdown>
   );
 };

@@ -11,33 +11,38 @@ import { useTranslation } from 'react-i18next';
 import { LanguageMenu } from '../common/components/LanguageMenu';
 import { DEFAULT_KEY } from './constants/constants';
 import { useLocation, useNavigate } from 'react-router-dom';
-import './App.less'
-
+import './App.less';
 
 const { Header, Sider, Content } = Layout;
 
 export const App = () => {
   const [collapsed, setCollapsed] = useState(false);
   const navigate = useNavigate();
-  const {t} = useTranslation('common');
-  const location = useLocation()
+  const { t } = useTranslation('common');
+  const location = useLocation();
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
 
   const handleClick = (path: string) => {
-    navigate(path)
-  }
+    navigate(path);
+  };
 
-  const keyLocation = location.pathname.includes('user') ? DEFAULT_KEY : location.pathname; 
+  const keyLocation = location.pathname.includes('user')
+    ? DEFAULT_KEY
+    : location.pathname;
 
   return (
-    <Layout style={{height:"100vh"}}>
-      <Sider trigger={null} collapsible breakpoint="sm"
+    <Layout style={{ height: '100vh' }}>
+      <Sider
+        trigger={null}
+        collapsible
+        breakpoint="sm"
         onBreakpoint={(broken) => {
-          setCollapsed(broken)
+          setCollapsed(broken);
         }}
-         collapsed={collapsed}>
+        collapsed={collapsed}
+      >
         <div className="demo-logo-vertical" />
         <Menu
           theme="dark"
@@ -48,13 +53,13 @@ export const App = () => {
               key: '/',
               icon: <UserOutlined />,
               label: t('menu.user'),
-              onClick: () => handleClick('/')
+              onClick: () => handleClick('/'),
             },
             {
               key: '/currency',
               icon: <VideoCameraOutlined />,
               label: t('menu.currency'),
-              onClick: () => handleClick('/currency')
+              onClick: () => handleClick('/currency'),
             },
           ]}
         />
@@ -84,7 +89,7 @@ export const App = () => {
             background: colorBgContainer,
             borderRadius: borderRadiusLG,
           }}
-          className='app-main-content-container'
+          className="app-main-content-container"
         >
           <RoutedApp />
         </Content>

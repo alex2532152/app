@@ -27,4 +27,4 @@ export const configureI18n = async () => {
         loadPath: '/locales/{{ns}}/{{lng}}.json',
       },
     });
-}
+};

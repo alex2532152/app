@@ -1,1 +1,1 @@
-export { SearchUser } from "./SearchUser";
+export { SearchUser } from './SearchUser';

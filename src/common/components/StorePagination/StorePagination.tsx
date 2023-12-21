@@ -1,10 +1,9 @@
-import { Button, Pagination, PaginationProps } from "antd";
-import { PaginationState } from "../../models/PaginationState";
-import { PaginationStore } from "../../store/PaginationStore";
-import { useEffect } from "react";
+import { Button, Pagination, PaginationProps } from 'antd';
+import { PaginationState } from '../../models/PaginationState';
+import { PaginationStore } from '../../store/PaginationStore';
+import { useEffect } from 'react';
 import { LeftCircleOutlined, RightCircleOutlined } from '@ant-design/icons';
-import "./StorePagination.less"
-
+import './StorePagination.less';
 
 type StorePaginationProps = Omit<
   PaginationProps,
@@ -20,7 +19,6 @@ export const StorePagination = ({
   simple = false,
   ...rest
 }: StorePaginationProps) => {
-
   const lastPage = !total ? undefined : Math.ceil(total / state.pageSize);
 
   const itemRender: PaginationProps['itemRender'] = (
@@ -31,20 +29,14 @@ export const StorePagination = ({
     if (type === 'prev') {
       return (
         <div>
-          <Button
-            icon={<LeftCircleOutlined />}
-            type="text"
-          />
+          <Button icon={<LeftCircleOutlined />} type="text" />
         </div>
       );
     }
     if (type === 'next') {
       return (
         <div>
-          <Button
-            icon={<RightCircleOutlined />}
-            type="text"
-          />
+          <Button icon={<RightCircleOutlined />} type="text" />
         </div>
       );
     }
@@ -60,7 +52,6 @@ export const StorePagination = ({
       set(lastPage, state.pageSize);
     }
   }, [lastPage, set, state, total]);
-
 
   return (
     <Pagination

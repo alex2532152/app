@@ -1,8 +1,8 @@
 declare module '*.svg' {
-    type SvgComponent = import('../models/SvgComponent').SvgComponent;
+  type SvgComponent = import('../models/SvgComponent').SvgComponent;
 
-    export const Svg: SvgComponent;  
-    const src: string;
+  export const Svg: SvgComponent;
+  const src: string;
 
-    export default src;
+  export default src;
 }

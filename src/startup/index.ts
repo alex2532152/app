@@ -1,5 +1,5 @@
-import { configureI18n } from "./configureI18n"
+import { configureI18n } from './configureI18n';
 
 export const startup = async () => {
-    await configureI18n()
-}
+  await configureI18n();
+};

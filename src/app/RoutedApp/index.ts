@@ -1,2 +1,1 @@
-export { RoutedApp } from "./RoutedApp";
-
+export { RoutedApp } from './RoutedApp';

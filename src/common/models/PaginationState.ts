@@ -1,4 +1,4 @@
 export type PaginationState = {
-    current: number;
-    pageSize: number;
-}
+  current: number;
+  pageSize: number;
+};
